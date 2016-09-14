@@ -4,6 +4,10 @@ body {margin: 0px auto;}
 a {color: #333;}
 input:focus {outline: none;}
 
+.navbar-inverse {
+    border-color:none;
+}
+
 /* Table */
 
 table {text-align: left; width: 100%}
