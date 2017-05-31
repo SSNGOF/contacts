@@ -16,6 +16,8 @@
     <div class="container">
         <nav>
             <ul class="nav nav-pills pull-right">
+                <li><a href="http://southsudanngoforum.org/3w">3W INGOs</a></li>
+                <li><a href="http://southsudanngoforum.org/3w-nngo">3W NNGOs</a></li>
                 <li class="active"><a href="http://southsudanngoforum.org/contacts">INGO CD Contacts</a></li>
                 <li><a href="http://southsudanngoforum.org/NNGO-CD-Contacts">NNGO CD Contacts</a></li>
             </ul>
@@ -28,13 +30,7 @@
     <div class="content-main-content" id="dashboard">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="title-divider">INGO Country Director Contact List<span></span></h3>
-                <div class="notes blue-notes">
-                    <ul>
-                        <li>This contact list contains contact details from CD's of organisations who are members of the NGO Forum.</li>
-                        <li>If a contact is missing or contains errors contact Ngo Forum Information Manager on <a>infomgr@southsudanngoforum.org</a></li>
-                    </ul>
-                </div>                    
+                <h3 class="title-divider">Members<span></span></h3>                   
             </div>
         </div>
 
@@ -49,7 +45,7 @@
     </div>
     <footer>
         <p class="text-center">
-            &copy; South Sudan NGO Forum | southsudanngoforum.org | All rights reserved | Powered by <a href="https://github.com/brianmcdonald/">Brian's Scripts</a>
+            <strong><small>Powered by <a href="https://github.com/brianmcdonald/">Brian Mc Donald Scripts</a> Developed by <a href="http://www.southsudanngoforum.org">Kenneth Muturi</a> - infomgr@southsudanngoforum.org</a></small></strong>
         </p>
     </footer>
 </div>
@@ -61,17 +57,17 @@
 <script id="fullTable_template" type="text/html">
     <table class="table table-bordered table-condensed table-striped">
         <tr>
-            <th class="tHeader">Organisation</th>
-            <th class="tHeader">Name</th>
-            <th class="tHeader">Email</th>
-            <th class="tHeader">Phone</th>
+            <th class="tHeader">Clusters</th>
+            <th class="tHeader">WASH</th>
+            <th class="tHeader">Education</th>
+            <th class="tHeader">Media</th>
         </tr>
         {{#rows}}
         <tr>
-            <td>{{organisation}}</td>
-            <td>{{name}}</td>
-            <td>{{email}}</td>
-            <td>{{phone}}</td>
+            <td>{{clusters}}</td>
+            <td>{{wash}}</td>
+            <td>{{education}}</td>
+            <td>{{media}}</td>
         </tr>
         {{/rows}}
     </table>
@@ -81,9 +77,10 @@
     document.addEventListener('DOMContentLoaded', function() 
     {
         Tabletop.init({
-            key: '1AAw4iJqyA4UqmNuSU_rCQwZ2T4PS2WAyywP65YMIdVw',
+            key: '1xVNCozRa0V5Z5EF5BtkQNrxZRmvKQbNj3ve8UCxP4Xk',
             simpleSheet: true,
             callback: function(data) {
+                console.log( data )
                 _tableOptions = {
                     "data": data,
                     "pagination": 50,
