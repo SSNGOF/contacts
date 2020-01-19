@@ -85,16 +85,20 @@
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() 
     {
-        $.getJSON('https://services.southsudanngoforum.org/api/contacts/ingo/cdg', function(data) {
-            _tableOptions = {
-                "data": data,
-                "pagination": 30,
-                "tableDiv": "#fullTable",
-                "filterDiv": "#fullTableFilter"
-            }
-            Sheetsee.makeTable(_tableOptions)
-            Sheetsee.initiateTableFilter(_tableOptions)
-        });
+        Tabletop.init({
+            key: '1AAw4iJqyA4UqmNuSU_rCQwZ2T4PS2WAyywP65YMIdVw',
+            simpleSheet: true,
+            callback: function(data) {
+                _tableOptions = {
+                    "data": data,
+                    "pagination": 30,
+                    "tableDiv": "#fullTable",
+                    "filterDiv": "#fullTableFilter"
+                }
+                Sheetsee.makeTable(_tableOptions)
+                Sheetsee.initiateTableFilter(_tableOptions)
+            },
+        })
     })
 
     // google analytics
