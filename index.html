@@ -84,8 +84,6 @@
     document.addEventListener('DOMContentLoaded', function() 
     {
         $.getJSON('https://services.southsudanngoforum.org/api/services/contact/ingo/cdg', function(data) {
-        //$.getJSON('http://localhost/SSNGOF/ngo-forum-ci/api/services/contact/nngo/ndg', function(data) {
-        //$.getJSON('https://apps.southsudanngoforum.org/api/contacts/type/national', function(data) {
             _tableOptions = {
                 "data": data,
                 "pagination": 30,
@@ -95,7 +93,7 @@
             Sheetsee.makeTable(_tableOptions)
             Sheetsee.initiateTableFilter(_tableOptions)
         });
-    })
+    });
 
     // google analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
